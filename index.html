@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Twitter Clone</title>
+</head>
+<body>
+    
+    <header>
+        <aside>
+            <a href="" class="logo"><i class="fa-brands fa-twitter"></i></a>
+            <ul>
+                <li class="active"><a href="/"><i class="fa-solid fa-home"></i>Home</a></li>
+                <li><a href=""><i class="fa-solid fa-hashtag"></i>Explore</a></li>
+                <li><a href=""><i class="fa-solid fa-bell"></i>Notifications</a></li>
+                <li><a href=""><i class="fa-solid fa-envelope"></i>Messages</a></li>
+                <li><a href=""><i class="fa-solid fa-bookmark"></i>Bookmarks</a></li>
+                <li><a href=""><i class="fa-solid fa-list"></i>Lists</a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user"></i>Profile</a></li>
+                <li><a href=""><i class="fa-solid fa-ellipsis-h"></i>More</a></li>
+            </ul>
+            <button class="tweet-btn">Tweet</button>
+        </aside>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+                <div class="search">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search on twitter ...">
+                </div>
+                <div class="user">
+                    <h6>Hey, Khaled!</h6>
+                    <img src="./images/img/me.jpg" width="70" alt="user">
+                </div>
+            </nav>
+            <div class="main-page-section">
+                <div class="left-box">
+                    <div class="profile-card">
+                        <img src="./images/icon/bluetick.png" alt="" class="blue-tick">
+                        <img src="./images/img/me.jpg" class="user-profile-img" alt="">
+                        <h5 class="name">Khaled Daowd</h5>
+                        <h6>@kh_x99x</h6>
+                        <address>
+                            <a href="#"s>
+                                <i class="fa-solid fa-location-dot"></i>
+                            Gaza City
+                            </a>
+                            <a href="">
+                                <i class="fa-solid fa-earth-asia"></i>
+                            </a>
+                        </address>
+                        <h4 class="disc">Web Developer interested to master React.Js</h4>
+                        <div class="followers">
+                            <div class="followers-box">
+                                <h5>Tweets</h5>
+                                <h6>523</h6>
+                            </div>
+                            <div class="followers-box">
+                                <h5>Following</h5>
+                                <h6>1,000</h6>
+                            </div>
+                            <div class="followers-box">
+                                <h5>Followers</h5>
+                                <h6>500</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activities">
+                        <div class="box">
+                            <i class="fa-solid fa-eye"></i>
+                            <h5>Activity</h5>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-bolt"></i>                            
+                            <h5>Moments</h5>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-user-friends"></i>
+                            <h5>Friends</h5>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-gear"></i>
+                            <h5>Edit Profile</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-box">
+                    <div class="links">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Tweets</a></li>
+                                <li><a href="#">Tweets & Followers</a></li>
+                                <li><a href="#">Media</a></li>
+                                <li><a href="#">Links</a></li>
+                            </ul>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </nav>
+                    </div>
+                    <div class="post-container">
+                        <div class="shear-container">
+                            <div class="shear-content">
+                                <img src="./images/img/me.jpg" alt="" class="shear-profile-img">
+                                <div class="shear-tweet-box">
+                                    <!-- shear tweet box -->
+                                    <div class="wrapper">
+                                        <div class="choose-audience">
+                                            <button class="audience" onclick="showDropdown()">
+                                                <i class="fas fa-globe-asia"></i>
+                                                <span>Everyone</span>
+                                                <i class="fas fa-caret-down"></i>
+                                            </button>
+                                            <div class="dropdown-list" id="dropdownList">
+                                                <ul>
+                                                    <li>
+                                                        <div class="chooses">
+                                                            <i class="fas fa-globe-asia"></i>
+                                                            <span>Everyone</span>
+                                                        </div>
+                                                        <div class="check"> <i class="fas fa-check"></i> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="chooses">
+                                                            <i class="fas fa-user-friends"></i>
+                                                            <span>People you follow</span>
+                                                        </div>
+                                                        <div class="check"> <i class="fas fa-check"></i> </div>
+                                                    </li>
+                                                </ul>    
+                                            </div>
+                                        </div>
+                                        <div class="input-box">
+                                          <div class="tweet-area">                                  
+                                            <span class="placeholder">What's happening?</span>
+                                            <div class="input editable" contenteditable="true" spellcheck="false"></div>
+                                            <div class="input readonly" contenteditable="true" spellcheck="false"></div>
+                                         </div>
+                                            <div class="privacy">
+                                            <i class="fas fa-globe-asia"></i>
+                                            <span>Everyone can reply</span>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <ul class="icons">
+                                            <li><i class="uil uil-capture"></i></li>
+                                            <li><i class="far fa-file-image"></i></li>
+                                            <li><i class="fas fa-map-marker-alt"></i></li>
+                                            <li><i class="far fa-grin"></i></li>
+                                            <li><i class="far fa-user"></i></li>
+                                            </ul>
+                                            <div class="content">
+                                            <span class="counter">100</span>
+                                            <button id="btn-tweet">Tweet</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-card">
+                            <div class="post-profile-pic">
+                                <img src="./images/img/me.jpg" alt="">
+                            </div>
+                            <div class="post-content">
+                                <div class="retweet">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <h6>RONALDO RETWEET</h6>
+                                </div>
+                                <div class="name-time">
+                                    <h5>Khaled Daowd <img src="./images/icon/bluetick.png" alt=""> <span class="username">@kh_x99x</span ></h5>
+                                    <h6> <i class="fa-regular fa-clock"></i> 33mins</h6>
+                                </div>
+                                <div class="post-text">
+                                    <p>Very good words...</p>
+                                </div>
+                                <div class="retweet-container">
+                                    <div class="retweet-name-time">
+                                        <h5> <img src="./images/img/ronaldo.jpg" alt=""> Ciristiano Ronaldo <span class="username">@ronaldo</span ></h5>
+                                        <h6> <i class="fa-regular fa-clock"></i> 2 hours</h6>
+                                    </div>
+                                    <div class="retweet-post-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ad incidunt aliquid nobis sequi...
+                                    </div>
+                                </div>
+                                <div class="post-footer">
+                                        <a href="#"><i class="fa-solid fa-comment"></i>24</a>
+                                        <a href="#"><i class="fa-solid fa-retweet"></i>34</a>
+                                        <a href="#"><i class="fa-solid fa-heart"></i>924</a>
+                                        <a class="last" href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-card">
+                            <div class="post-profile-pic">
+                                <img src="./images/img/me.jpg" alt="">
+                            </div>
+                            <div class="post-content">
+                                <div class="name-time">
+                                    <h5>Khaled Daowd <img src="./images/icon/bluetick.png" alt=""> <span class="username">@kh_x99x</span ></h5>
+                                    <h6> <i class="fa-regular fa-clock"></i> 1 hour</h6>
+                                </div>
+                                <div class="post-text">
+                                    <p>Today on Dubai, It was a good day...</p>
+                                </div>
+                                <div class="tweet-container">
+                                    <div class="post-photos">
+                                        <img src="./images/img/img1.jpg" alt="">
+                                        <img src="./images/img/img2.jpg" alt="">
+                                        <img src="./images/img/img3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="post-footer">
+                                        <a href="#"><i class="fa-solid fa-comment"></i>214</a>
+                                        <a href="#"><i class="fa-solid fa-retweet"></i>314</a>
+                                        <a href="#"><i class="fa-solid fa-heart"></i>244</a>
+                                        <a class="last" href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-card">
+                            <div class="post-profile-pic">
+                                <img src="./images/img/user4.jpg" alt="">
+                            </div>
+                            <div class="post-content">
+                                <div class="name-time">
+                                    <h5>President Biden  <img src="./images/icon/bluetick.png" alt=""> <span class="username">@biden</span ></h5>
+                                    <h6> <i class="fa-regular fa-clock"></i> 5 hours</h6>
+                                </div>
+                                <div class="post-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro animi hic quo amet voluptas provident explicabo laborum expedita exercitationem necessitatibus  consectetur?</p>
+                                </div>
+                                <div class="post-footer">
+                                        <a href="#"><i class="fa-solid fa-comment"></i>55</a>
+                                        <a href="#"><i class="fa-solid fa-retweet"></i>44</a>
+                                        <a href="#"><i class="fa-solid fa-heart"></i>523</a>
+                                        <a class="last" href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-box">
+                    <div class="trends-box">
+                        <div class="trends-for-u">
+                            <h5>Trends for you</h5>
+                            <i class="fa-solid fa-cog"></i>
+                        </div>
+                        <div class="trends-menu">
+                            <div class="trend-content">
+                                <div class="title">
+                                    <h5>#Covid-19</h5>
+                                    <h6>1.2M Tweets</h6>
+                                </div>
+                                <i class="fa-solid fa-chevron-down"></i>                            
+                            </div>
+                            <div class="trend-content">
+                                <div class="title">
+                                    <h5>#React.Js</h5>
+                                    <h6>5.2M Tweets</h6>
+                                </div>
+                                <i class="fa-solid fa-chevron-down"></i>                            
+                            </div>
+                            <div class="trend-content">
+                                <div class="title">
+                                    <h5>#Football</h5>
+                                    <h6>8.5M Tweets</h6>
+                                </div>
+                                <i class="fa-solid fa-chevron-down"></i>                            
+                            </div>
+                            <div class="trend-content">
+                                <div class="title">
+                                    <h5>#Coding-world</h5>
+                                    <h6>2M Tweets</h6>
+                                </div>
+                                <i class="fa-solid fa-chevron-down"></i>                            
+                            </div>
+                            <div class="see-more">
+                                <h5>See more</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suggest-follow-box">
+                        <div class="u-should-follow">
+                            <h5>You should follow</h5>
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <div class="follow-menu">
+                            <div class="follow-content">
+                                <div class="info">
+                                    <img src="./images/img/user2.jpg" class="follow-profile-img" alt="">
+                                    <div class="usermane">
+                                        <div class="username-content">
+                                            <h6>MS Dohni</h6>
+                                            <img src="./images/icon/bluetick.png" alt="">
+                                        </div>
+                                        <p>@msdohni</p>
+                                    </div>
+                                </div>
+                                <button class="follow-btn">
+                                    Follow
+                                </button>
+                            </div>
+                            <div class="follow-content">
+                                <div class="info">
+                                    <img src="./images/img/user1.jpg" class="follow-profile-img" alt="">
+                                    <div class="usermane">
+                                        <div class="username-content">
+                                            <h6>MS Dohni</h6>
+                                            <img src="./images/icon/bluetick.png" alt="">
+                                        </div>
+                                        <p>@msdohni</p>
+                                    </div>
+                                </div>
+                                <button class="follow-btn">
+                                    Follow
+                                </button>
+                            </div>
+                            <div class="follow-content">
+                                <div class="info">
+                                    <img src="./images/img/user3.jpg" class="follow-profile-img" alt="">
+                                    <div class="usermane">
+                                        <div class="username-content">
+                                            <h6>MS Dohni</h6>
+                                            <img src="./images/icon/bluetick.png" alt="">
+                                        </div>
+                                        <p>@msdohni</p>
+                                    </div>
+                                </div>
+                                <button class="follow-btn">
+                                    Follow
+                                </button>
+                            </div>
+                            <div class="see-more">
+                                <h5>See more</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+<script src="main.js"></script>
+</body>
+</html>
